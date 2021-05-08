@@ -8,14 +8,14 @@ import modelo.*;
 import utilidades.Util;
 
 public class Main {
-	
+
 	/**
-	 * Se utilizan los rut de los clientes creados a travez del metoro rellenarListaClientes();
-	 * su clave de acceso son los caracteres desde el 0 al 4 de cada rut
+	 * Se utilizan los rut de los clientes creados a travez del metoro
+	 * rellenarListaClientes(); su clave de acceso son los caracteres desde el 0 al
+	 * 4 de cada rut
 	 * 
-	 * Alex Castillo: "17999999"
-	 * Andres Calamaro: "18000000"
-	 * Rodrigo Tapia : "18000001"
+	 * Alex Castillo: "17999999" Andres Calamaro: "18000000" Rodrigo Tapia :
+	 * "18000001"
 	 */
 
 	static ArrayList<Producto> productos = new ArrayList<>();
@@ -31,7 +31,8 @@ public class Main {
 	}
 
 	/**
-	 * Una vez identificado el cliente se tienen 3 opciones donde se uso switch para cada una.
+	 * Una vez identificado el cliente se tienen 3 opciones donde se uso switch para
+	 * cada una.
 	 * 
 	 */
 	private static void menuPrincipal(Cliente cliente) {
@@ -70,12 +71,13 @@ public class Main {
 		}
 
 	}
-/**
- * Metodo de acceso a aplicacion, una vez confirmada la identiad del cliente se redireccionara
- * hacia el metodo menuPrincipal()
- * 
- */
-	
+
+	/**
+	 * Metodo de acceso a aplicacion, una vez confirmada la identiad del cliente se
+	 * redireccionara hacia el metodo menuPrincipal()
+	 * 
+	 */
+
 	private static Cliente menuIngresoCliente() {
 		Cliente cliente = null;
 		while (null == cliente) {
