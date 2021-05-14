@@ -71,8 +71,7 @@ public class Util {
 			case 2:
 			default:
 				if (tarjeta.getSaldo() > tarjeta.getDeuda()) {
-					tarjeta.setSaldo(tarjeta.getSaldo()-tarjeta.getDeuda());
-					tarjeta.setDeuda(0);
+					tarjeta.limpiarDeuda();
 					greenMsj("Su deuda ha sido pagada, volviendo al menu de tarjeta.");
 				}else {
 					redMsj("No a sido posible pagar su deuda, saldo insuficiente");
@@ -125,7 +124,7 @@ public class Util {
 				while (aRetirar < 0) {
 					try {
 						aRetirar = Double.parseDouble(Main.sc.nextLine());
-						cuenta.setSaldo(cuenta.getSaldo() - aRetirar);
+						cuenta.sacarDinero(aRetirar);
 						greenMsj("Dinero retirado, volviendo al menu de cuenta corriente.");
 					} catch (Exception e) {
 						opcion = -1;
@@ -136,8 +135,7 @@ public class Util {
 			default:
 				
 				if (cuenta.getSaldo() > cuenta.getDeuda()) {
-					cuenta.setSaldo(cuenta.getSaldo()-cuenta.getDeuda());
-					cuenta.setDeuda(0);
+					cuenta.limpiarDeuda();
 					greenMsj("Su deuda ha sido pagada, volviendo al menu de cuenta corriente.");
 				}else {
 					redMsj("No a sido posible pagar su deuda, saldo insuficiente");

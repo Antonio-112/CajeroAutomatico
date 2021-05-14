@@ -1,5 +1,9 @@
 package modelo;
 
+/**
+ * @author Antonio A.
+ *
+ */
 public class Producto {
 
 	protected Cliente cliente;
@@ -20,6 +24,21 @@ public class Producto {
 		this.clave = clave;
 	}
 
+	
+	public void sacarDinero(double cantidad) {
+		this.saldo -= cantidad;
+	}
+	
+	public void ingresarDinero(double cantidad) {
+		this.saldo += cantidad;
+	}
+	
+	
+	public void limpiarDeuda() {
+		this.saldo -= this.deuda;
+		this.deuda = 0;
+	}
+	
 	/**
 	 * @return the cliente
 	 */
